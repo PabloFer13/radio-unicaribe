@@ -27,7 +27,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "watch": "watchify -t babelify main.jsx -o ./assets/js/bundle/bundle.js"
+    "watch": "watchify assets/js/main.jsx -o ./assets/js/bundle/bundle.js -t [ babelify --presets [ react es2015 ] ] -v"
   },
   "main": "app.js",
   "repository": {
@@ -37,6 +37,7 @@
   "author": "pablofer",
   "license": "",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "react": "^15.6.1",
